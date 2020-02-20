@@ -30,4 +30,9 @@ public class Customer {
 		this.email = email;
 	}
 
+	@Override
+	public String toString() {
+		return "Customer [id=" + id + ", name=" + name + ", email=" + email + "]";
+	}
+
 }

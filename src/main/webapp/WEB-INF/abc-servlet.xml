@@ -5,8 +5,13 @@
 
 	<bean id="helloController"
 		class="abc.xy.controllers.HelloController"></bean>
-		
-	<bean id="customerCtrl" class="abc.xy.controllers.CustomerController"></bean>
+
+	<bean id="customerCtrl"
+		class="abc.xy.controllers.CustomerController">
+		<property name="cs" ref="customerServ"></property>
+	</bean>
+
+	<bean id="customerServ" class="abc.xy.services.CustomerService"></bean>
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
